@@ -1,6 +1,6 @@
 
 from django.shortcuts import render
-from .models import Empleado
+from .models import Empleado, Portfolio
 
 
 def index(request):
@@ -12,5 +12,6 @@ def empleados_list(request):
 def empleados_create(request):
     return render(request, 'empleados/new.html')
 
-def portfolio_list(request):
-    return render(request, 'empleados/portfolio.html')
+def portfolio_list(request): #FBV
+    portfolios = Portfolio.objects.all()
+    return render(request, 'empleados/portfolio.html', {'portfolios': portfolios})

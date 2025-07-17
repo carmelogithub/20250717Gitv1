@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from empleados.models import Empleado, Departamento
+from empleados.models import Empleado, Departamento, Portfolio
 
 
 @admin.register(Empleado)
@@ -9,3 +9,4 @@ class EmpleadoAdmin(admin.ModelAdmin):
     list_filter = ('departamento',)
 
 admin.site.register(Departamento)
+admin.site.register(Portfolio)

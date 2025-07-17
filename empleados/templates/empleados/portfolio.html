@@ -3,4 +3,9 @@
 {% block content %}
 <h2>Listado de portfolios</h2>
     <p>Ultimos proyectos desarrollados por nuestros empleados</p>
+    <ul>
+{% for p in portfolios %}
+<li>{{ p.nombre }} - {{ p.descripcion }}</li>
+{% endfor %}
+</ul>
 {% endblock %}
