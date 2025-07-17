@@ -11,3 +11,6 @@ def empleados_list(request):
 
 def empleados_create(request):
     return render(request, 'empleados/new.html')
+
+def portfolio_list(request):
+    return render(request, 'empleados/portfolio.html')
